@@ -11,7 +11,7 @@ public interface BooksRepository extends JpaRepository <Books, Long>{
     List<Books> findByTitleContainingIgnoreCase(String bookName);
 
     @Query("SELECT a FROM Books b JOIN b.athors a ORDER BY name")
-    List<Authors> findAuthors();
+    List<Authors> findAllAuthors();
 
     @Query(value = "SELECT * FROM public.books ORDER BY languages", nativeQuery = true)
     List<Books> findAllBooksOrderByLanguages();
