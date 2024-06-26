@@ -25,7 +25,7 @@
 ![BD](https://github.com/tuliusalves/LiterAlura/blob/main/screen/04.PNG)
 ![Postman](https://github.com/tuliusalves/LiterAlura/blob/main/screen/05.PNG)
 
-<h2>Nessa aplicação foram usadas... </h2>
+<h2>Tecnologias usadas</h2>
 <ul>
   <li>API para buscar os livros (Gutendex) : https://gutendex.com/   seu repositório: https://github.com/garethbjohnson/gutendex</li>
   <li>Java 17</li>
@@ -33,4 +33,7 @@
 </ul>
 
 <h4>Observações</h4>
-<p>O arquivo <strong>application.properties</strong> for configurado com variáveis de ambiente no windows.</p>
+<p>O arquivo <strong>application.properties</strong> foi configurado com variáveis de ambiente no windows.</p>
+
+<h2>Desenvolvedor </h2>
+<p><strong>Nome: Túlius Alves.</strong>  | <strong>Linkedin:</strong>https://www.linkedin.com/in/tuliusalves/</p>
