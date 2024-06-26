@@ -62,7 +62,7 @@ public class Main {
                 case 5:
                     List<Books> books = repository.findAllBooksOrderByLanguages();
                     books.forEach(b -> System.out.println("Idioma = "+ Arrays.toString(b.getLanguages())
-                            +", Título = "+b.getTitle()+ "Autor ="+ b.getAuthors()));
+                            +", Título = "+b.getTitle()));
                     break;
                 case 6:
                     top5Books();
@@ -101,6 +101,7 @@ public class Main {
 
     private void listAllBooks() {
         List<Books> books = repository.findAll();
+
         books.forEach(System.out::println);
     }
 

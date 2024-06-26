@@ -12,12 +12,13 @@ public class Books {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+    @Column(unique = true)
     private String title;
     private String [] languages;
     private Integer downloadCount;
     private String image;
 
-    @OneToMany(mappedBy = "book", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+    @OneToMany(mappedBy = "books", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     private List<Authors> authors = new ArrayList<>();
 
     public Books(){}
@@ -81,19 +82,20 @@ public class Books {
         this.authors = authors;
     }
 
+
+    @Override
+    public String toString() {
+        return "Título= " + title  +
+                ", Autores= " + authorsName()+
+                ", Idioma= " + languages[0] +
+                ", Total de Downloads =" + downloadCount;
+    }
+
     private String authorsName(){
         StringBuilder authorsName = new StringBuilder();
         for(Authors a: authors){
             authorsName.append(a.getName()).append(", ");
         }
         return authorsName.toString();
-    }
-
-    @Override
-    public String toString() {
-        return "Título= " + title + '\'' +
-                ", Autores= " + authorsName()+
-                ", Idioma= " + languages[0] +
-                ", Total de Downloads =" + downloadCount;
     }
 }

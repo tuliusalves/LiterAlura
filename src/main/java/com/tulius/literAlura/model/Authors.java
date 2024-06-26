@@ -3,7 +3,7 @@ package com.tulius.literAlura.model;
 import jakarta.persistence.*;
 
 @Entity
-@Table(name = "Authors")
+@Table(name = "authors")
 public class Authors {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
